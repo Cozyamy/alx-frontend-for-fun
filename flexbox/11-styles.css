@@ -61,7 +61,7 @@
   
     /** HEADER **/
     --header-padding: 4rem 0 0;
-
+  
     /** FOOTER **/
     --footer-padding: 5rem 0 1rem;
   
@@ -160,12 +160,24 @@
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
   }
+  
+  /*** 2. LAYOUT ***/
+  
+  /* Layout
+      ============================= */
+  
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   /* Grid
       ============================= */
   
   .row {
     display: flex;
-  }
+  }    
 
   ul.row {
     margin: -1rem;
@@ -188,16 +200,16 @@
   /* Navbar
       ============================= */
   
-  .navbar-menu {
-    float: right;
-  }
-  
   .nav {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
-    display: flex;
+  }
+
+  .nav .nav-item + .nav-item {
+    margin: var(--nav-item-margin);
   }
   
   .nav .nav-item {
@@ -233,10 +245,6 @@
     background-color: var(--color-primary);
     width: 100%;
   }
-
-  .nav .nav-item + .nav-item {
-    margin: var(--nav-item-margin);
-  }
   
   /* Header
       ============================= */
@@ -251,7 +259,7 @@
     padding: var(--header-padding);
     position: relative;
     z-index: 3;
-    background: transparent !important;
+    background: transparent;
   }
   
   /* Footer
@@ -342,6 +350,13 @@
     margin-top: -8.5rem;
   }
 
+  .hero-homepage {
+    background-position: 75% 0;
+    background-repeat: no-repeat;
+    background-size: 90rem auto;
+    background-color: #010101;
+  }
+
   .section-hero .section-body {
     padding: 10rem 4rem;
   }
@@ -351,13 +366,6 @@
     text-transform: uppercase;
   }
 
-  .hero-homepage {
-    background-position: 75% 0;
-    background-repeat: no-repeat;
-    background-size: 90rem auto;
-    background-color: #010101;
-  }
-  
   .section-hero .section-title {
     margin-bottom: 5rem;
   }
@@ -370,26 +378,28 @@
     min-height: 50vh;
   }
 
-  /* Section Latest news =============================*/
-
-  .section-blog .row {
+  /* Section Latest news 
+      ============================= */
+    
+  .section-latest-news .row {
     flex-direction: row-reverse;
   }
-  
-  /*** 4. CARD ***/
 
-  /* Section SERVICES ============================= */
+  /* Section SERVICES 
+      ============================= */
 
   .section-services .row {
     flex-wrap: wrap;
   }
-  
-  /* Section ABOUT US ============================= */
 
+  /* Section ABOUT US
+      ============================= */
   .section-about-us [class*='col-'] {
     align-self: center;
   }
-
+  
+  /*** 4. CARD ***/
+  
   /* Card (all styles)
       ============================= */
   
@@ -517,9 +527,9 @@
   }
 
   /*** ARTICLE PAGE ***/
-/* Section HERO (article)
-    ============================= */
 
+  /* Section HERO (article)
+    ============================= */
   .hero-article {
     background-size: 150rem 100rem;
     background-position: 50% 0;

@@ -1,7 +1,6 @@
-# Flexbox
+# Learning Objectives
 
-## learning objectives
-
+- What is Flexbox?
 - How to convert float positioning to a flex display
 - How to horizontally and vertically align elements using Flexbox
 - The difference between the main and cross axes

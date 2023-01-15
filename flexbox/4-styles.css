@@ -165,12 +165,24 @@
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
   }
+  
+  /*** 2. LAYOUT ***/
+  
+  /* Layout
+      ============================= */
+  
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   /* Grid
       ============================= */
   
   .row {
     display: flex;
-  }
+  }    
 
   ul.row {
     margin: -1rem;
@@ -245,9 +257,9 @@
   
   .header {
     padding: var(--header-padding);
-         position: relative;
-         z-index: 3;
-         background: transparent !important;
+    position: relative;
+    z-index: 3;
+    background: transparent;
   }
   
   .header-logo {
@@ -359,19 +371,21 @@
     padding: 10rem 40rem 2rem 0;
   }
 
-  /* Section Latest news =============================*/
-
-  .section-blog .row {
+  /* Section Latest news 
+      ============================= */
+    
+  .section-latest-news .row {
     flex-direction: row-reverse;
   }
-  
-  /*** 4. CARD ***/
 
-  /* Section SERVICES ============================= */
+  /* Section SERVICES 
+      ============================= */
 
   .section-services .row {
     flex-wrap: wrap;
   }
+  
+  /*** 4. CARD ***/
   
   /* Card (all styles)
       ============================= */
